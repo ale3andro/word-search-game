@@ -26,7 +26,7 @@
     var default_settings = {
       'directions': ['W', 'N', 'WN', 'EN'],
       'gridSize': 10,
-      'words': ['one', 'two', 'three', 'four', 'five'],
+      'words': ['ΝΕΡΟ'], //, 'ΦΩΤΙΑ', 'ΑΕΡΑΣ', 'ΘΑΛΑΣΣΑ', 'ΝΗΣΙ'],
 	  'wordsList' : [],
       'debug': false
     }
@@ -373,8 +373,8 @@
     var overlay = document.getElementById("ws-game-over-outer");
       overlay.innerHTML = "<div class='ws-game-over-inner' id='ws-game-over-inner'>"+
                             "<div class='ws-game-over' id='ws-game-over'>"+
-                              "<h2>Congratulations!</h2>"+
-                              "<p>You've found all of the words!</p>"+
+                              "<h2>Συγχαρητήρια!</h2>"+
+                              "<p>Βρήκες όλες τις λέξεις!</p>"+
                             "</div>"+
                           "</div>";
   }
