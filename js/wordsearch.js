@@ -22,11 +22,37 @@
     //Words solved.
     this.solved = 0;
 
+    var categories = { 
+      'default' :  { "Γενικά" : ['ΝΕΡΟ', 'ΦΩΤΙΑ', 'ΑΕΡΑΣ', 'ΘΑΛΑΣΣΑ', 'ΝΗΣΙ', 'ΜΠΑΣΚΕΤ', 'ΒΟΛΕΥ', 'ΧΑΝΤΜΠΟΛ'] },
+      'b_yliko_mobo' : { "Β:: Μητρική πλακέτα" : ['ΜΗΤΡΙΚΗ', 'ΠΛΑΚΕΤΑ', 'ΒΑΣΗ', 'ΣΤΑΘΕΡΟΣ'] },
+      'b_yliko_ram_hdd' : { "Β:: Μνήμη &amp; Δίσκος" : ['ΜΝΗΜΗ', 'ΣΚΛΗΡΟΣ', 'ΔΙΣΚΟΣ', 'ΑΠΟΘΗΚΕΥΣΗ'] },
+      'b_yliko_cpu_cooler' : { "Β:: Επεξ. &amp; Ψύκτρα" : ['ΨΥΚΤΡΑ', 'ΜΥΑΛΟ', 'ΔΡΟΣΕΡΟΣ', 'ΠΡΑΞΕΙΣ'] },
+    };
+    
+    $('#categories').html("Διαθέσιμες κατηγορίες");
+    for (var key in categories) {
+      for (var key2 in categories[key])
+        $('#categories').html($('#categories').html() + "<li><a href=\"?cat=" + key + "\">" + key2 + "</a></li>");
+    }
+
+    var catParam = getUrlParams()['cat'];
+    if (catParam==undefined) {
+      var theWords = categories['default']['Γενικά'];
+    } else {
+        if (catParam in categories) {
+          var theWords=[];
+          for (var key in categories[catParam])
+            theWords = categories[catParam][key];
+        }
+        else
+          var theWords = categories['default']['Γενικά'];
+    }
+    
     // Default settings
     var default_settings = {
       'directions': ['W', 'N', 'WN', 'EN'],
       'gridSize': 10,
-      'words': ['ΝΕΡΟ'], //, 'ΦΩΤΙΑ', 'ΑΕΡΑΣ', 'ΘΑΛΑΣΣΑ', 'ΝΗΣΙ'],
+      'words': theWords,
 	  'wordsList' : [],
       'debug': false
     }
@@ -604,6 +630,23 @@ function searchLanguage(firstLetter)
 	}
 	console.log("Letter not detected : "+firstLetter+":"+codefirstLetter);
 	return codeLetter;
-	
-	
+}
+
+/** FROM https://www.kevinleary.net/javascript-get-url-parameters/
+ * JavaScript Get URL Parameter
+ * 
+ * @param String prop The specific URL parameter you want to retreive the value for
+ * @return String|Object If prop is provided a string value is returned, otherwise an object of all properties is returned
+ */
+function getUrlParams( prop ) {
+  var params = {};
+  var search = decodeURIComponent( window.location.href.slice( window.location.href.indexOf( '?' ) + 1 ) );
+  var definitions = search.split( '&' );
+
+  definitions.forEach( function( val, key ) {
+      var parts = val.split( '=', 2 );
+      params[ parts[ 0 ] ] = parts[ 1 ];
+  } );
+
+  return ( prop && prop in params ) ? params[ prop ] : params;
 }
