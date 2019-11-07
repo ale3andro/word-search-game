@@ -9,6 +9,12 @@
 ## Εικόνα - Screenshot
 ![word-search-game-screenshot](images/screenshot.png) 
 
+## Online δοκιμή
+Για να παίξεις το κρυπτόλεξο, πήγαινε σε [αυτή](http://www.sxoleio.pw/alx_code/word-search-game/) τη σελίδα.
+
+## Παραμετροποίηση
+Μέσα στο αρχείο [js/wordsearch.js](https://github.com/ale3andro/word-search-game/blob/master/js/wordsearch.js)  υπάρχει η μεταβλητή ***categories*** στην οποία μπορούν να παραμετροποιηθούν οι κατηγορίες (τροποποίηση/διαγραφή/προσθήκη κατηγοριών και λέξεων της κάθε κατηγορίας).
+
 ## Άδεια
 Άδεια τύπου ΜΙΤ.
 
