@@ -1,11 +1,13 @@
 # Κρυπτόλεξο
 Ένα παιχνίδι τύπου κρυπτόλεξο για εκπαιδευτική χρήση.
+Είναι fork [αυτού](https://github.com/lizhineng/word-search-game) του παιχνιδιού.
+Γραμμένο σε javascript. 
 
 ## Απαιτήσεις
-* Internet Explorer 10
-* Google Chrome 8
-* Opera 11.5
-* Safari 5
+* Βιβλιοθήκη javascript, jquery (στον server που φιλοξενεί την εφαρμογή)
+
+## Εικόνα - Screenshot
+![word-search-game-screenshot](images/screenshot.png) 
 
 ## Άδεια
 Άδεια τύπου ΜΙΤ.
