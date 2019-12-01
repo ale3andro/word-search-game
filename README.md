@@ -4,7 +4,7 @@
 Γραμμένο σε javascript. 
 
 ## Απαιτήσεις
-**yarn instal**
+**yarn install**
 
 ## Εικόνα - Screenshot
 ![word-search-game-screenshot](images/screenshot.png) 
