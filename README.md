@@ -4,7 +4,7 @@
 Γραμμένο σε javascript. 
 
 ## Απαιτήσεις
-* Βιβλιοθήκη javascript, jquery (στον server που φιλοξενεί την εφαρμογή)
+**yarn instal**
 
 ## Εικόνα - Screenshot
 ![word-search-game-screenshot](images/screenshot.png) 
