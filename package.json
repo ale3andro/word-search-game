@@ -1,0 +1,11 @@
+{
+  "name": "word-search-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ale3andro/word-search-game.git",
+  "author": "ale3andro <ale3andro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
